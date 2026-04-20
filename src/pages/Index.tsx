@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import GTONormsTable from "@/components/GTONormsTable"
 import Icon from "@/components/ui/icon"
+import IframeEmbed from "@/components/IframeEmbed"
 
 export default function Index() {
   const missionStatement =
@@ -83,14 +84,12 @@ export default function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg"
+            className="w-full"
           >
-            <iframe
+            <IframeEmbed
               src="https://gotovktrydyioborone.ru/muzhchinam/"
               title="Нормативы ГТО для мужчин"
-              className="w-full"
-              style={{ height: "900px", border: "none" }}
-              loading="lazy"
+              height={900}
             />
           </motion.div>
           <p className="text-center text-xs text-gray-400 mt-4">
@@ -120,14 +119,12 @@ export default function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg"
+            className="w-full"
           >
-            <iframe
+            <IframeEmbed
               src="https://gotovktrydyioborone.ru/zhenshhinam/"
               title="Нормативы ГТО для женщин"
-              className="w-full"
-              style={{ height: "900px", border: "none" }}
-              loading="lazy"
+              height={900}
             />
           </motion.div>
           <p className="text-center text-xs text-gray-400 mt-4">
