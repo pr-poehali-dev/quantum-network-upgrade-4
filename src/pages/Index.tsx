@@ -252,7 +252,7 @@ export default function Index() {
             <IframeEmbed
               src="https://gotovktrydyioborone.ru/"
               title="Сайт ГТО"
-              height={1200}
+              height={3500}
             />
           </motion.div>
           <p className="text-center text-xs text-gray-400 mt-4">
