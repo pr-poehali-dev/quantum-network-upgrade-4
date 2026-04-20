@@ -110,33 +110,32 @@ export default function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="text-center mb-10"
           >
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-4">ЖЕНЩИНАМ</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">ГТО — не только для мужчин. Это про здоровье, энергию и уверенность в себе на каждый день.</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Нормативы ГТО для женщин по всем ступеням и видам испытаний.</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: "Heart", title: "Здоровье и тонус", desc: "Нормативы для женщин составлены с учётом физиологии. Бег 2 км, плавание, гибкость — всё направлено на укрепление здоровья." },
-              { icon: "Zap", title: "Энергия и бодрость", desc: "Регулярные тренировки к ГТО повышают уровень энергии, улучшают сон и самочувствие. Результат заметен уже через месяц." },
-              { icon: "Star", title: "Значок как награда", desc: "Серебряный или золотой значок ГТО — это не просто украшение. Это символ силы и целеустремлённости современной женщины." },
-            ].map((card, i) => (
-              <motion.div
-                key={card.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-5">
-                  <Icon name={card.icon} size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-black tracking-wide text-gray-900 mb-3">{card.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg"
+          >
+            <iframe
+              src="https://gotovktrydyioborone.ru/zhenshhinam/"
+              title="Нормативы ГТО для женщин"
+              className="w-full"
+              style={{ height: "900px", border: "none" }}
+              loading="lazy"
+            />
+          </motion.div>
+          <p className="text-center text-xs text-gray-400 mt-4">
+            Источник:{" "}
+            <a href="https://gotovktrydyioborone.ru/zhenshhinam/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">
+              gotovktrydyioborone.ru
+            </a>
+          </p>
         </div>
       </section>
 
