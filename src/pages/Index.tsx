@@ -4,7 +4,6 @@ import { Timeline } from "@/components/ui/timeline"
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
 import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
-import GTONormsTable from "@/components/GTONormsTable"
 import Icon from "@/components/ui/icon"
 import IframeEmbed from "@/components/IframeEmbed"
 
@@ -83,9 +82,6 @@ export default function Index() {
           <Timeline entries={timelineEntries} />
         </div>
       </section>
-
-      {/* GTO Norms Table Section */}
-      <GTONormsTable />
 
       {/* Testimonials Section */}
       <section id="testimonials" className="relative py-20 bg-white">
