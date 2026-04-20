@@ -24,9 +24,10 @@ export default function HeroSection() {
 
   const navItems = [
     { name: "Главная", href: "#hero" },
-    { name: "О программе", href: "#mission" },
-    { name: "Как сдать", href: "#community" },
-    { name: "Отзывы", href: "#testimonials" },
+    { name: "Мужчинам", href: "#men" },
+    { name: "Женщинам", href: "#women" },
+    { name: "Рекомендации", href: "#recommendations" },
+    { name: "Нормативы", href: "#norms" },
     { name: "Начать", href: "#join" },
   ]
 

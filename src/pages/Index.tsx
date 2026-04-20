@@ -5,6 +5,7 @@ import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
 import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import GTONormsTable from "@/components/GTONormsTable"
+import Icon from "@/components/ui/icon"
 
 export default function Index() {
   const missionStatement =
@@ -59,6 +60,128 @@ export default function Index() {
               type="word"
               textOpacity="soft"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Мужчинам */}
+      <section id="men" className="relative py-20 bg-white">
+        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-4">МУЖЧИНАМ</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Докажи себе и окружающим — ты в форме. ГТО для мужчин это сила, выносливость и характер.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: "Dumbbell", title: "Силовые нормативы", desc: "Подтягивания, отжимания, рывок гири — испытания, которые покажут реальный уровень физической подготовки." },
+              { icon: "Timer", title: "Скорость и выносливость", desc: "Бег на 100 м, 3 км, лыжные гонки — каждый норматив тренирует тело и закаляет дух." },
+              { icon: "Trophy", title: "Золотой значок", desc: "Для абитуриентов — +5 баллов к ЕГЭ. Для всех — гордость и уважение. Это того стоит." },
+            ].map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true }}
+                className="bg-gray-900 text-white rounded-2xl p-8"
+              >
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-5">
+                  <Icon name={card.icon} size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-black tracking-wide mb-3">{card.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Женщинам */}
+      <section id="women" className="relative py-20 bg-gray-50">
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-4">ЖЕНЩИНАМ</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">ГТО — не только для мужчин. Это про здоровье, энергию и уверенность в себе на каждый день.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: "Heart", title: "Здоровье и тонус", desc: "Нормативы для женщин составлены с учётом физиологии. Бег 2 км, плавание, гибкость — всё направлено на укрепление здоровья." },
+              { icon: "Zap", title: "Энергия и бодрость", desc: "Регулярные тренировки к ГТО повышают уровень энергии, улучшают сон и самочувствие. Результат заметен уже через месяц." },
+              { icon: "Star", title: "Значок как награда", desc: "Серебряный или золотой значок ГТО — это не просто украшение. Это символ силы и целеустремлённости современной женщины." },
+            ].map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true }}
+                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-5">
+                  <Icon name={card.icon} size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-black tracking-wide text-gray-900 mb-3">{card.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Рекомендации */}
+      <section id="recommendations" className="relative py-20 bg-white">
+        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-4">РЕКОМЕНДАЦИИ</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Советы от тренеров и опытных участников — как подготовиться и сдать ГТО с первого раза.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: "CalendarDays", num: "01", title: "Начни за 2–3 месяца", desc: "Не откладывай на последний момент. 8–12 недель систематических тренировок дадут уверенный результат даже новичку." },
+              { icon: "ClipboardList", num: "02", title: "Изучи нормативы заранее", desc: "Посмотри таблицу нормативов для своего возраста и пола. Определи слабые места и сосредоточь тренировки на них." },
+              { icon: "Footprints", num: "03", title: "Тренируйся регулярно", desc: "3–4 тренировки в неделю эффективнее, чем одна изнурительная перед сдачей. Постепенность — ключ к результату." },
+              { icon: "Apple", num: "04", title: "Следи за питанием и сном", desc: "За 2 недели до сдачи особенно важны полноценный сон (7–8 часов) и сбалансированное питание с достаточным белком." },
+              { icon: "MapPin", num: "05", title: "Пройди пробное тестирование", desc: "Запишись на пробный прогон в ближайшем центре тестирования — это снимет стресс и покажет реальный уровень готовности." },
+              { icon: "ThumbsUp", num: "06", title: "В день сдачи — без рекордов", desc: "Хорошо выспись, не перегружайся накануне. Разминка перед испытаниями обязательна — она снижает риск травм." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true }}
+                className="flex gap-5 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-gray-300 transition-colors duration-300"
+              >
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center">
+                  <Icon name={item.icon} size={22} className="text-white" />
+                </div>
+                <div>
+                  <div className="text-xs font-black text-gray-400 tracking-widest mb-1">{item.num}</div>
+                  <h3 className="text-lg font-black text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
