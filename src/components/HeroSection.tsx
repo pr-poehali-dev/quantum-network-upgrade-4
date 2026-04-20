@@ -25,6 +25,7 @@ export default function HeroSection() {
   const navItems = [
     { name: "Главная", href: "#hero" },
     { name: "О программе", href: "#mission" },
+    { name: "Калькулятор", href: "#calculator" },
     { name: "Сайт ГТО", href: "#gto-site" },
     { name: "Начать", href: "#join" },
   ]

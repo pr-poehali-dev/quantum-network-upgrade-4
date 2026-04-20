@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import Icon from "@/components/ui/icon"
 import IframeEmbed from "@/components/IframeEmbed"
+import GTOCalculator from "@/components/GTOCalculator"
 
 export default function Index() {
   const missionStatement =
@@ -108,6 +109,9 @@ export default function Index() {
           <StaggerTestimonials />
         </div>
       </section>
+
+      {/* Калькулятор нормативов */}
+      <GTOCalculator />
 
       {/* Полный сайт ГТО */}
       <section id="gto-site" className="relative py-20 bg-white">
