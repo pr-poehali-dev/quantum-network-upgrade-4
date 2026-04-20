@@ -28,6 +28,7 @@ export default function HeroSection() {
     { name: "Женщинам", href: "#women" },
     { name: "Рекомендации", href: "#recommendations" },
     { name: "Нормативы", href: "#norms" },
+    { name: "Сайт ГТО", href: "#gto-site" },
     { name: "Начать", href: "#join" },
   ]
 

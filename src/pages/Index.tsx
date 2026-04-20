@@ -229,6 +229,41 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Полный сайт ГТО */}
+      <section id="gto-site" className="relative py-20 bg-white">
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-4">САЙТ ГТО</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Полный сайт gotovktrydyioborone.ru — всё в одном месте.</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="w-full"
+          >
+            <IframeEmbed
+              src="https://gotovktrydyioborone.ru/"
+              title="Сайт ГТО"
+              height={1200}
+            />
+          </motion.div>
+          <p className="text-center text-xs text-gray-400 mt-4">
+            Источник:{" "}
+            <a href="https://gotovktrydyioborone.ru/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">
+              gotovktrydyioborone.ru
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* Smooth Scroll Hero with CTA Overlay */}
       <section id="join" className="relative">
         <SmoothScrollHero
