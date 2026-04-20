@@ -73,33 +73,32 @@ export default function Index() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="text-center mb-10"
           >
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-4">МУЖЧИНАМ</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Докажи себе и окружающим — ты в форме. ГТО для мужчин это сила, выносливость и характер.</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Нормативы ГТО для мужчин по всем ступеням и видам испытаний.</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: "Dumbbell", title: "Силовые нормативы", desc: "Подтягивания, отжимания, рывок гири — испытания, которые покажут реальный уровень физической подготовки." },
-              { icon: "Timer", title: "Скорость и выносливость", desc: "Бег на 100 м, 3 км, лыжные гонки — каждый норматив тренирует тело и закаляет дух." },
-              { icon: "Trophy", title: "Золотой значок", desc: "Для абитуриентов — +5 баллов к ЕГЭ. Для всех — гордость и уважение. Это того стоит." },
-            ].map((card, i) => (
-              <motion.div
-                key={card.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                viewport={{ once: true }}
-                className="bg-gray-900 text-white rounded-2xl p-8"
-              >
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-5">
-                  <Icon name={card.icon} size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-black tracking-wide mb-3">{card.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg"
+          >
+            <iframe
+              src="https://gotovktrydyioborone.ru/muzhchinam/"
+              title="Нормативы ГТО для мужчин"
+              className="w-full"
+              style={{ height: "900px", border: "none" }}
+              loading="lazy"
+            />
+          </motion.div>
+          <p className="text-center text-xs text-gray-400 mt-4">
+            Источник:{" "}
+            <a href="https://gotovktrydyioborone.ru/muzhchinam/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600 transition-colors">
+              gotovktrydyioborone.ru
+            </a>
+          </p>
         </div>
       </section>
 
