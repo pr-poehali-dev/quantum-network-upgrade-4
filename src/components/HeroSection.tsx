@@ -1,6 +1,7 @@
 import { LiquidButton } from "@/components/ui/liquid-glass-button"
 import { Menu, ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useState } from "react"
+import Icon from "@/components/ui/icon"
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -71,16 +72,36 @@ export default function HeroSection() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
             </button>
           ))}
+          <a
+            href="https://auth.gto.gov.ru/auth/realms/MinsportAuthGto/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fgto.gov.ru%2Fopenid-connect-auth%2Fredirect_uri&scope=openid&state=686320b3a7401e12045e0310e6279952&client_id=MinsportAuthGto-Proxy&nonce=6e9cf4414312db6a4bf1bf37a7e0e867"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-semibold px-4 py-2 rounded-full transition-all duration-300 tracking-wide text-sm"
+          >
+            <Icon name="User" size={16} />
+            Личный кабинет
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white hover:text-gray-300 transition-colors"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          <span className="sr-only">Меню</span>
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <a
+            href="https://auth.gto.gov.ru/auth/realms/MinsportAuthGto/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fgto.gov.ru%2Fopenid-connect-auth%2Fredirect_uri&scope=openid&state=686320b3a7401e12045e0310e6279952&client_id=MinsportAuthGto-Proxy&nonce=6e9cf4414312db6a4bf1bf37a7e0e867"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-3 py-1.5 rounded-full transition-all duration-300 text-sm"
+          >
+            <Icon name="User" size={14} />
+            Кабинет
+          </a>
+          <button
+            className="text-white hover:text-gray-300 transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <span className="sr-only">Меню</span>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation Menu */}
